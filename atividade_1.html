@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	var tela = document.querySelector ("canvas");
+	var pincel = tela.getContext ("2d");
+
+	pincel.fillStyle = "green";
+	pincel.fillRect (200,0,400,400);
+
+	function retangulo(w,x,y,z,cor){
+
+		pincel.fillStyle = "black";
+		pincel.fillRect (w,x,y,z);
+
+	}
+
+	retangulo (270,80,90,90);
+	retangulo (430,80,90,90);
+	retangulo (360,170,70,150);
+	retangulo (310,250,50,150);
+	retangulo (430,250,50,150);
+
+</script>

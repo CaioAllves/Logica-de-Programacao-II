@@ -1,0 +1,74 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	var tela = document.querySelector ("canvas");
+	var pincel = tela.getContext ("2d");
+
+	function frase (texto,x,y) {
+		pincel.font = "20px Georgia";
+		pincel.fillStyle = "black";
+		pincel.fillText (texto,x,y); 
+	}
+
+	function desenha (w,x,y,z,cor) {
+		pincel.fillStyle = cor;
+	pincel.fillRect (w,x,y,z);
+	}
+
+	function grafico2015() {
+			
+			frase ("2015", 80,80); 
+
+			desenha (80,100,40,200,"blue");
+
+			desenha (80,190,40,110,"green");
+
+			desenha (80,250,40,50,"yellow");
+
+			desenha (80,285,40,15,"red");
+	}
+
+	function grafico2016 () {
+
+			frase ("2016",200,80);
+
+			desenha (200,100,40,200,"blue");
+
+			desenha (200,220,40,80,"green");
+
+			desenha (200,265,40,35,"yellow");
+
+			desenha (200,295,40,5,"red");
+	}
+
+	frase ("Grafico de Barras que representa porcentagem de uso dos navegadores", 10,15);
+	frase ("nos anos de 2015 e 2016",200,40);
+
+	grafico2015 ();
+
+	grafico2016 ();
+
+
+	desenha (350,100,50,50,"blue");
+	frase ("Google Chrome",420,130);
+
+	desenha (350,160,50,50,"green");
+	frase ("Mozilla Firefox", 420,190);
+
+	desenha (350,220,50,50,"yellow");
+	frase ("Safari",420,250);
+
+	desenha (350,280,50,50,"red");
+	frase ("Outros",420,310);
+
+	frase ("50%",130,150);
+	frase ("65%",250,150);
+	frase ("25%",130,230);
+	frase ("20%",250,250);
+	frase ("20%",130,275);
+	frase ("13%",250,285);
+	frase ("5%",130,300);
+	frase ("2%",250,310);
+
+</script>

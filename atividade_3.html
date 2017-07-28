@@ -1,0 +1,35 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	function triangulo (u,v,w,x,y,z,cor) {
+		pincel.fillStyle = cor;
+		pincel.beginPath ();
+		pincel.moveTo (u,v);
+		pincel.lineTo (w,x);
+		pincel.lineTo (y,z);
+		pincel.fill ();
+	}
+
+	function retangulo (w,x,y,z,cor) {
+		pincel.fillStyle = cor;
+		pincel.fillRect (w,x,y,z);
+	}
+
+	var tela = document.querySelector ("canvas");
+	var pincel = tela.getContext ("2d");
+
+	retangulo (0,0,600,400,"pink");
+
+	retangulo (10,10,580,380,"green");
+
+	triangulo (300,350,100,200,500,200,"yellow");
+
+	triangulo (300,50,100,200,500,200,"yellow");
+
+	pincel.fillStyle = "blue";
+	pincel.beginPath ();
+	pincel.arc (300,200,50,0,2*3.14);
+	pincel.fill ();
+	
+</script>

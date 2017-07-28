@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	var tela = document.querySelector ("canvas");
+	var pincel = tela.getContext ("2d");
+
+	pincel.fillStyle = "green";
+	pincel.fillRect (0,0,600,400);
+
+	function esquadro(u,v,w,x,y,z,cor) {
+		pincel.fillStyle = cor;
+		pincel.beginPath ();
+		pincel.moveTo (u,v);
+		pincel.lineTo (w,x);
+		pincel.lineTo (y,z);
+		pincel.fill();
+	}
+
+	esquadro (50,25,50,375,400,375,"black");
+	
+	esquadro (100,150,100,325,250,325,"white");
+
+</script>

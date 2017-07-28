@@ -1,0 +1,25 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	var tela = document.querySelector ("canvas");
+	var pincel = tela.getContext ("2d");
+
+	function circulo(a,b,c,d,e,cor) {
+		pincel.fillStyle = cor;
+		pincel.beginPath ();
+		pincel.arc(a,b,c,d,e);
+		pincel.fill ();
+	}
+
+	circulo (300,200,10,0,2*3.14,"red");
+
+	circulo (280,200,10,0,2*3.14,"orange");
+
+	circulo	(320,200,10,0,2*3.14,"black");
+	
+	circulo (300,220,10,0,2*3.14,"blue");
+
+	circulo (300,180,10,0,2*3.14,"brown");
+
+</script>
